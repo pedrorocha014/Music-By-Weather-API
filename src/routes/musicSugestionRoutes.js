@@ -3,6 +3,7 @@ const musicSugestionController = require('../controllers/musicSugestionControlle
 
 var musicSugestionRouter = express.Router();
 
-musicSugestionRouter.get('/teste', musicSugestionController.sugestMusicByWeather);
+musicSugestionRouter.get('/getMusic', musicSugestionController.sugestMusicByWeather);
+musicSugestionRouter.get('/callback', musicSugestionController.spotifyCallBack);
 
 module.exports = musicSugestionRouter; 

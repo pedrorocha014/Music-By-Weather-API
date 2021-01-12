@@ -41,3 +41,9 @@ exports.spotifyCallBack = async function (req, res) {
 
     return res.send("OKAY");
 }
+
+exports.testes = async function (req, res){
+    spotifyWebApi.getPlay();
+
+    return res.send("ok");
+}

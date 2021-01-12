@@ -5,5 +5,6 @@ var musicSugestionRouter = express.Router();
 
 musicSugestionRouter.get('/getMusic', musicSugestionController.sugestMusicByWeather);
 musicSugestionRouter.get('/callback', musicSugestionController.spotifyCallBack);
+musicSugestionRouter.get('/teste', musicSugestionController.testes);
 
 module.exports = musicSugestionRouter; 

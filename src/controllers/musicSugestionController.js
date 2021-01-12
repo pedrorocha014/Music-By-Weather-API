@@ -1,4 +1,5 @@
 const spotifyWebApi = require('../modules/spotifyWebApiModule');
+const weatherApi = require('../modules/musicSugestionModule')
 
 exports.sugestMusicByWeather = async function (req, res) {
 
@@ -39,11 +40,11 @@ exports.spotifyCallBack = async function (req, res) {
 
     spotifyWebApi.getSpotifyAccessToken(code);
 
-    return res.send("OKAY");
+    return res.json(code);
 }
 
 exports.testes = async function (req, res){
-    spotifyWebApi.getPlay();
-
+    //spotifyWebApi.getPlay();
+    weatherApi();
     return res.send("ok");
 }
